@@ -10,42 +10,231 @@
 	
     <script type="text/javascript">
 		angular.module("tabs", ["ionic"]);
-	</script>
+
+    </script>
  
   </head>
   <body ng-app="tabs">
-
 	<ion-nav-view>
-  
 		<ion-tabs>
-
-		  <ion-tab title="One">
+		  <ion-tab title="Home">
 			<ion-view>
-				<h1>
-					Tab 1
-				</h1>
+				<ion-header-bar class="bar bar-stable">
+				<h1 class="title" align="center">Calorific</h1>
+				</ion-header-bar>
+				<ion-content>
+					<div class="card">
+						<div class="item item-text-wrap">
+							Calorific is an app created by the request of 
+							The Irish Health Department in order to keep young
+							Irish adults healthy. The app allows you to see
+							the calories in everyday Irish foods.
+						</div>
+					</div>
+					<div class="list-cardi" align="center">
+						<div class="item item-body">
+							<img height="500" width="device-width" src="https://thecurionomist.files.wordpress.com/2015/03/skin-healthy-food-1409877801.jpg" />
+							<p>
+							Click the Foods tab below to see how many calories
+							are in your meal!
+							</p>
+						</div>
+					</div>
+				</ion-content>
 			</ion-view>
 		  </ion-tab>
 
-		  <ion-tab title="Two">
+		  <ion-tab title="Foods">
 			<ion-view>
-				<h1>
-					Tab 2
-				</h1>
+				<ion-header-bar class="bar bar-stable">
+				<h1 class="title" align="center">Typical Irish Foods</h1>
+				</ion-header-bar>
+				<ion-content>
+				  <div class="list">
+				    <div class="item item-divider">
+					    Grains, Beans and Legumes
+				    </div>
+				    <label class="item item-input item-select">
+				      <div class="input-label">
+					Eggs
+				      </div>
+				      <div><p>1 {{eggs}} calories</p></div>
+				      <select ng-model="eggs">
+					<option selected>Boiled egg = 211</option>
+					<option>Fried egg = 92</option>
+					<option>Poached egg = 74</option>
+					<option>Scrambled egg = 365</option>
+				      </select>
+				    </label>
+				    <label class="item item-input item-select">
+				      <div class="input-label">
+					Potatoes
+				      </div>
+				      <div><p>1 {{potatoes}} calories</p></div>
+				      <select ng-model="potatoes">
+					<option selected>Boiled potato = 118</option>
+					<option>Mashed potato = 107</option>
+					<option>Fried potato = 149</option>
+					<option>Baked potato = 278</option>
+				      </select>
+				    </label>
+				    <label class="item item-input item-select">
+					    <div class="input-label">
+						    Bread
+					    </div>
+					    <div><p>1 Slice of {{bread}} calories</p></div>
+					    <select ng-model="bread">
+						    <option selected>White bread = 94</option>
+						    <option>Wholemeal bread = 88</option>
+						    <option>Brown bread = 98</option>
+					    </select>
+				    </label>
+				    <label class="item item-input item-select">
+					    <div class="input-label">
+						    Beans
+					    </div>
+					    <div><p>100g of {{beans}} calories</p></div>
+					    <select ng-model="beans">
+						    <option selected>Kidney beans = 210</option>
+						    <option>Canned beans = 237</option>
+						    <option>Pinto beans = 206</option>
+						    <option>Black beans = 227</option>
+					    </select>
+				    </label>	    
+				    <div class="item item-divider">
+					    Meats and Fish
+				    </div>
+				    <label class="item item-input item-select">
+				      <div class="input-label">
+					Beef
+				      </div>
+				      <div><p>100g of {{beef}} calories</p></div>
+				      <select ng-model="beef">
+					<option selected>Cured/Corned beef = 250</option>
+					<option>Roast beef = 224</option>
+				      </select>
+				    </label>
+				    <label class="item item-input item-select">
+				      <div class="input-label">
+					Pork
+				      </div>
+				      <div><p>1 {{pork}} calories</p></div>
+				      <select ng-model="pork">
+					      <option selected>Pork sausage = 163</option>
+					      <option>Pork cutlet = 120</option>
+					      <option>Pork chop = 102</option>
+					      <option>Pork loin = 215</option>
+				      </select>
+				    </label>
+				    <label class="item item-input item-select">
+					    <div class="input-label">
+						    Chicken
+					    </div>
+					    <div><p>1 {{chicken}} calories </p></div>
+					    <select ng-model="chicken">
+						    <option selected>Chicken breast = 147</option>
+						    <option>Chicken goujon = 77</option>
+						    <option>Chicken tender = 44</option>
+						    <option>Chicken nugget = 52</option>
+						    <option>Chicken leg = 255</option>
+						    <option>Chicken wing = 100</option>
+					     </select>
+				     </label>
+				     <label class ="item item-input item-select">
+					     <div class="input-label">
+						     Fish
+					     </div>
+					     <div><p> 100g of {{fish}} calories </p></div>
+					     <select ng-model="fish">
+						     <option selected>Cod = 82</option>
+						     <option>Salmon = 116</option>
+						     <option>Bass = 97</option>
+					     </select>
+				      </label>
+				      <div class="item item-divider">
+					      Dairy Products
+				      </div>
+				      <label class="item item-input item-select">
+					      <div class="input-label">
+						      Cheese
+					      </div>
+					      <div><p>100g of {{cheese}} calories</p></div>
+					      <select ng-model="cheese">
+						      <option selected>Cheddar cheese = 416</option>
+						      <option>Mozarella cheese = 245</option>
+						      <option>Edam cheese = 357</option>
+						      <option>Feta cheese = 264</option>
+					      </select>
+				       </label>
+				       <label class="item item-input item-select">
+					       <div class="input-label">
+						       Yogurt
+					       </div>
+					       <div><p>1 cup of {{yogurt}} calories</p></div>
+					       <select ng-model="yogurt">
+						       <option selected>Plain yogurt = 149</option>
+						       <option>Frozen chocolate yogurt = 221</option>
+						       <option>Frozen vanilla yogurt = 234</option>
+					        </select>
+					</label>
+					<div class="item item-divider">
+						Fruit/Veg
+					</div>
+					<label class="item item-input item-select">
+						<div class="input-label">
+							Fruits
+						</div>
+						<div><p>1 {{fruit}} calories</p></div>
+						<select ng-model="fruit">
+							<option selected>Apple = 70</option>
+							<option>Banana = 103</option>
+							<option>Orange = 73</option>
+							<option>Tomato = 33</option>
+						</select>
+					</label>
+					<label class="item item-input item-select">
+						<div class="input-label">
+							Vegetables
+						</div>
+						<div><p>100g of {{veg}} calories</p></div>
+						<select ng-model="veg">
+							<option selected>Cucumber = 16</option>
+							<option>Carrot = 40</option>
+							<option>Lettuce = 8</option>
+						</select>
+					</label>
+					<div class="item item-divider">
+						Confections
+					</div>
+					<label class="item item-input item-select">
+						<div class="input-label">
+							Crisps
+						</div>
+						<div><p>1 pack of {{crisp}} calories</p></div>
+						<select ng-model="crisp">
+							<option selected>Cheese'n'Onion Taytos = 134</option>
+							<option>Wheelies = 91</option>
+							<option>Chickatees = 89</option>
+							<option>Pringles = 900</option>
+						</select>
+					</label>
+					<label class="item item-input item-select">
+						<div class="input-label">
+							Chocolate
+						</div>
+						<div><p>1 {{choc}} calories</p></div>
+						<select ng-model="choc">
+							<option selected>Wispa bar = 215</option>
+							<option>Twirl = 230</option>
+							<option>CurlyWurly = 115</option>
+							<option>Crunchie = 185</option>
+							<option>Creme egg = 177</option>
+						</select>
+					</label>
+				  </div>
 			</ion-view>
 		  </ion-tab>
-
-		  <ion-tab title="Three">
-			<ion-view>
-				<h1>
-					Tab 3
-				</h1>
-			</ion-view>
-		  </ion-tab>
-
 		</ion-tabs>
-	
-	</ion-nav-view>
-	
+	</ion-nav-view>	
   </body>
 </html>
